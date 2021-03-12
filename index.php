@@ -1,6 +1,7 @@
 <?php
 require_once "config/config.php";
 require_once "config/connection.php";
+require_once "models/helper.php";
 
 
 if(isset($_POST['registerSubmit'])){

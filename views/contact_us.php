@@ -52,7 +52,6 @@
                                         <div class="help-block with-errors"></div>
                                     </div>
                                     <div class="submit-button text-center">
-                                        <!-- <button class="btn hvr-hover" id="submit" name="submitContactForm" value="submit" type="submit">Send Message</button> -->
                                         <input class="btn hvr-hover" type="submit" name="submitContactForm" value="submit">
                                         <div id="msgSubmit" class="h3 text-center hidden"></div>
                                         <div class="clearfix"></div>

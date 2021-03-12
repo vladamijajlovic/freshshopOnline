@@ -48,7 +48,7 @@ function contactCheck(event) {
     } 
     else {
         if(!validateSubject.test(subject)) {
-            errors.push("Subject capital letter is a must!");
+            errors.push("Subject capital letter is a must! And one word only!");
             event.preventDefault();
         } 
     }

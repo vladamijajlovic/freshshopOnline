@@ -40,7 +40,13 @@
 
             try {
                 $exec = $query->execute();
-                header('location: index.php?page=contact_us&success=Message sent successfully!');
+
+                if (headers_sent()) {
+                    die("Update is successfull, but redirect failed. Please click on this link: <a href='index.php?page=contact_us'>Here</a>");
+                }
+                else{
+                    exit(header("Location: ".BASE_URL."index.php?page=contact_us"));
+                }
 
             } catch (PDOException $exception) {
                 header('location: index.php?page=contact_us&error=Not able to send message!');
