@@ -55,14 +55,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             $execInsert = $queryRegisterUser->execute();
             
         } catch (Exception $e) {
-            $urlUpdate = "location: " . BASE_URL . "admin-pannel/admin-index.php?admin-page=user-update";
-            header($urlUpdate . "&error=Neuspesan update&artikal_id=".$params['id']);
+            $urlUpdate = "location: " . BASE_URL . "index.php?page=register";
+            header($urlUpdate . "&error=Query error");
         }
         header("location: " . BASE_URL . "index.php?page=login");
     }
 }
 else {
-    header('location: '.BASE_URL.'admin-pannel/admin-index.php?admin-page=korisnici&errorInsert=Neovlasceni pristup');
+    header('location: '.BASE_URL.'index.php?page=register&error=Can not enter page');
 }
 
 
